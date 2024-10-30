@@ -797,6 +797,10 @@
                 </div>
             </div>
         </section>
-        <!--/ New Cars -->
     </main>
+
+    @section('footerLinks')
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    @endsection
 @endsection
