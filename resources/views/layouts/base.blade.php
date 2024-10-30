@@ -1,3 +1,5 @@
+@props(['bodyClass' => '', 'title' => ''])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -24,8 +26,8 @@
     <!-- <link rel="stylesheet" href="css/output.css" /> -->
 </head>
 
-<body>
-    @yield('childContent')
+<body @if($bodyClass) class="{{$bodyClass}}"@endif>
+    {{$slot}}
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"
         integrity="sha512-XJgPMFq31Ren4pKVQgeD+0JTDzn0IwS1802sc+QTZckE6rny7AN2HLReq6Yamwpd2hFe5nJJGZLvPStWFv5Kww=="
